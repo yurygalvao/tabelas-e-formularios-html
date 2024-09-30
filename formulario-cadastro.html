@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        form { max-width: 400px; margin: auto; }
+        label { display: block; margin: 10px 0 5px; }
+        input, select, textarea { width: 100%; padding: 8px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <form id="cadastroForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required minlength="8">
+
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+        <label>Gênero:</label>
+        <label><input type="radio" name="genero" value="masculino" required> Masculino</label>
+        <label><input type="radio" name="genero" value="feminino"> Feminino</label>
+        <label><input type="radio" name="genero" value="outro"> Outro</label>
+
+        <label for="cidade">Cidade:</label>
+        <select id="cidade" name="cidade" required>
+            <option value="">Selecione...</option>
+            <option value="cidade1">Maceió</option>
+            <option value="cidade2">São Miguel dos Campos</option>
+            <option value="cidade3">Paripueira</option>
+        </select>
+
+        <label for="interesses">Interesses:</label>
+        <label><input type="checkbox" name="interesses" value="tecnologia"> Tecnologia</label>
+        <label><input type="checkbox" name="interesses" value="esportes"> Esportes</label>
+        <label><input type="checkbox" name="interesses" value="arte"> Arte</label>
+
+        <label for="quantidadeProdutos">Quantidade de Produtos:</label>
+        <input type="number" id="quantidadeProdutos" name="quantidadeProdutos" min="1" required>
+
+        <label for="observacoes">Observações Adicionais:</label>
+        <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Formulário enviado com sucesso!');
+        });
+    </script>
+</body>
+</html>

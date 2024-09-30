@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        caption {
+            padding: 10px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício de tabelas</h1>
+    <table>
+        <caption>Tabela</caption>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th colspan="2" scope="colgroup">Nota</th>
+                <th>Média Final</th>
+                <th>Classificação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="2" scope="rowgroup">João</th>
+                <th>Nota 1</th>
+                <th>9.0</th>
+                <th rowspan="2" scope="rowgroup">9.0</th>
+                <th rowspan="2" scope="rowgroup">1º</th>
+            </tr>
+            <tr>
+                <th>Nota 2</th>
+                <th>9.0</th>
+            </tr>
+            <tr>
+                <th rowspan="2" scope="rowgroup">Maria</th>
+                <th>Nota 1</th>
+                <th>9.0</th>
+                <th rowspan="2" scope="rowgroup">8.5</th>
+                <th rowspan="2" scope="rowgroup">2º</th>
+            </tr>
+            <tr>
+                <th>Nota 2</th>
+                <th>8.0</th>
+            </tr>
+            <tr>
+                <th rowspan="2" scope="rowgroup">José</th>
+                <th>Nota 1</th>
+                <th>8.0</th>
+                <th rowspan="2" scope="rowgroup">8.0</th>
+                <th rowspan="2" scope="rowgroup">3º</th>
+            </tr>
+            <tr>
+                <th>Nota 2</th>
+                <th>8.0</th>
+            </tr>
+            <tr>
+                <th rowspan="2" scope="rowgroup">Enzo</th>
+                <th>Nota 1</th>
+                <th>8.0</th>
+                <th rowspan="2" scope="rowgroup">7.5</th>
+                <th rowspan="2" scope="rowgroup">4º</th>
+            </tr>
+            <tr>
+                <th>Nota 2</th>
+                <th>7.0</th>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>
